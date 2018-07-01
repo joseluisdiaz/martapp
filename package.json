@@ -1,0 +1,24 @@
+{
+  "name": "martapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && echo \"Error: no test specified yet, you should add something like: node my-tests.js\"",
+    "fixall": "standard --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^7.2.0",
+    "env2": "^2.2.2",
+    "hapi": "^17.5.2",
+    "inert": "^5.1.0",
+    "joi": "^13.4.0",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
+}
