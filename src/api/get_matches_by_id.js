@@ -6,8 +6,8 @@ module.exports = {
   config: {
     handler: async function getMatchByID (request, h) {
       console.log('inside getMatchByID handler')
-      const queryText = `SELECT * FROM "Matches" WHERE "Matches"."MatchID" = ${encodeURIComponent(request.params.id)}`
-      const values = []
+      const queryText = `SELECT * FROM "Matches" WHERE "Matches"."MatchID" = $1`
+      const values = [request.params.id]
       try {
         let results = await request.pg.query(queryText, values)
         return results.rows

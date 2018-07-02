@@ -6,8 +6,8 @@ module.exports = {
   config: {
     handler: async function getPlayerById (request, h) {
       console.log('inside getPlayerById handler')
-      const queryText = `SELECT * FROM "Players" WHERE "Players"."PlayerID" = ${encodeURIComponent(request.params.id)}`
-      const values = []
+      const queryText = `SELECT * FROM "Players" WHERE "Players"."PlayerID" = $1`
+      const values = [request.params.id]
       try {
         let results = await request.pg.query(queryText, values)
         return results.rows
